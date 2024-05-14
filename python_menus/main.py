@@ -46,17 +46,17 @@ def main():
 
     #print("     air. open the airport project plan\n")
     #print("     9. The LangChain Agent Plan\n")
-    
+ 
     choice = input("\n    Please select an option: \n    > ")
     print( "                                                 " )
 
-
+    home_directory = "/home/adamsl/smart-menu"
 
     if choice == "kk":
         print( "opening smart menu... " )
         # open a child process to execute script
-        os.chdir( "/home/adamsl/linuxBash/python_menus/smart_menu" )
-        os.system( "python3 test_smart_menu_system.py" )
+        os.chdir( home_directory + "/python_menus/smart_menu" )
+        os.system( "python3 smart_menu_system.py" )
         main()
     
     if choice == "99sw":
@@ -69,7 +69,7 @@ def main():
     if choice == "4":
         print("making mode 1 score tests... " )
         # open a child process to execute script
-        os.chdir( "/home/adamsl/linuxBash/SMOL_AI/tennis_unit_tests/Mode1Score/" )
+        os.chdir( home_directory + "/SMOL_AI/tennis_unit_tests/Mode1Score/" )
         os.system( "make" )
         main()
         
@@ -88,7 +88,7 @@ def main():
         print( "opening ai research menu... " )
         # clear terminal screen
         os.system( "clear" )
-        os.system( "python3 /home/adamsl/linuxBash/python_menus/agent_menu.py" )
+        os.system( "python3 " + home_directory + "/python_menus/agent_menu.py" )
     
     elif choice == "s":
         # run agent.py 
@@ -102,7 +102,7 @@ def main():
     elif choice == "2":
         print( "running mode 1 score tests..." )
         # open a child process to execute script 2
-        os.chdir( "/home/adamsl/linuxBash/SMOL_AI/tennis_unit_tests/Mode1Score/" )
+        os.chdir( home_directory + "/SMOL_AI/tennis_unit_tests/Mode1Score/" )
         os.system("./run_tests" )
         input( "Press Enter to continue..." )
         main()
@@ -142,7 +142,7 @@ def main():
         os.chdir( "/home/adamsl/ai_generated_projects/car_wash_test" )
         os.system( "python3 open_fcw_page.py " )
         print( "changing back to main directory... " )
-        os.chdir( "/home/adamsl/linuxBash" )
+        os.chdir( home_directory )
 
         main()
 
@@ -150,7 +150,7 @@ def main():
         print( "opening mcba menu... " )
         # clear terminal screen
         os.system( "clear" )
-        os.system( "python3 /home/adamsl/linuxBash/python_menus/mcba_system_dashboard.py " )
+        os.system( "python3 " + home_directory + "/python_menus/mcba_system_dashboard.py " )
         main()
     
     elif choice == "5":
@@ -164,7 +164,7 @@ def main():
     elif choice == "6":
         print("opening linux bash repository in vscode... " )
         # cd to the directory where the script is located
-        os.chdir( "/home/adamsl/linuxBash" )
+        os.chdir( home_directory )
         # open vscode in the directory
         os.system( "code ." )
         main()
@@ -180,7 +180,7 @@ def main():
     elif choice == "8":
         print("opening current test fixture workspace( SMOL_AI ) in vscode... " )
         # cd to the directory where the script is located
-        os.chdir( "/home/adamsl/linuxBash/SMOL_AI" )
+        os.chdir( home_directory + "/SMOL_AI" )
         # open vscode in the directory
         os.system( "code ." )
         main()
@@ -188,33 +188,33 @@ def main():
     elif choice == "9":
         print("opening test fixture for tennis matrix repository in vscode... " )
         # cd to the directory where the script is located
-        # os.chdir( "/home/adamsl/linuxBash/project_management/plan.md" )
+        # os.chdir( home_directory + "/project_management/plan.md" )
         # open vscode in the directory
-        os.system( "code  /home/adamsl/linuxBash/project-management/next_steps.md" )
+        os.system( "code  " + home_directory + "/project-management/next_steps.md" )
         main()
     
     elif choice == "air":
         print("opening acceleration doc... " )
         # cd to the directory where the script is located
-        # os.chdir( "/home/adamsl/linuxBash/project_management/plan.md" )
+        # os.chdir( home_directory + "/project_management/plan.md" )
         # open vscode in the directory
-        os.system( "code  /home/adamsl/linuxBash/acceleration_documentation.md" )
+        os.system( "code  " + home_directory + "/acceleration_documentation.md" )
         main()
     
     elif choice == "s":
         print("opening main swift startup in folder chrome-meta-gpt using vscode... " )
         # cd to the directory where the script is located
-        # os.chdir( "/home/adamsl/linuxBash/project_management/plan.md" )
+        # os.chdir( home_directory + "/project_management/plan.md" )
         # open vscode in the directory
-        os.system( "code  /home/adamsl/linuxBash/chrome-meta-gpt/swift_startup.py" )
+        os.system( "code  " + home_directory + "/chrome-meta-gpt/swift_startup.py" )
         main()
 
     elif choice == "o":
         print("opening python menu directory in vscode... " )
         # cd to the directory where the script is located
-        # os.chdir( "/home/adamsl/linuxBash/project_management/plan.md" )
+        # os.chdir( home_directory + "/project_management/plan.md" )
         # open vscode in the directory
-        os.system( "code  /home/adamsl/linuxBash/python_menus/" )
+        os.system( "code " + home_directory + "/python_menus/" )
         main()
     
     elif choice == "h":

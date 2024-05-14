@@ -66,7 +66,7 @@ class PopulateFileList:
                 ftp.login( ftp_user, ftp_password )  # login as user anonymous, passwd anonymous@ (usually email address is used as password) - passwd is being sent in clear text!
                 print( "\nLogged into americansjewelry.com" )  # connection message from server is printed on stdout (screen)
 
-                try:  # set binary mode for transferring image files - use ASCII for text files! - setpassive() sets passive mode on or off (default off), returns nothing - passive mode is used when client behind firewall/NAT router needs to initiate data transfer with server outside firewall/NAT router! - active mode is used when client outside firewall/NAT router needs to initiate data transfer with server behind firewall/NAT router! - active mode requires that client be able to accept incoming connections from server! - passive mode requires that client be able to initiate outgoing connections with server! - active vs passive modes are not related to FTP commands PORT vs PASV! PORT command tells server which port number it should connect back to for data transfer while PASV command tells client which port number it should connect back to for data transfer! In both cases, client is initiating connection!
+                try:  
                     ftp.set_pasv(True)  # set passive mode on
                     print( "\nSet passive mode on" )  # connection message from server is printed on stdout (screen)
 

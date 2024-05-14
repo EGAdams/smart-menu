@@ -86,7 +86,7 @@ class MenuManager:
 
 def main():
     menu = Menu()
-    menu_manager = MenuManager(menu, "path_to_config.json")
+    menu_manager = MenuManager(menu, "./config.json")
     menu_manager.load_menus()
     menu.display_and_select(menu_manager)
 

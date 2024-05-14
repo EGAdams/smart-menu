@@ -15,9 +15,9 @@ def print_menu(files):
 
 def main():
     chosen_zip_file = ""
-    workingPickleballDirectory  = "/mnt/c/Users/EG/Desktop/2022/may/2nd_week/pickle_cpp"
-    pickleballLibraryServerPath = "/public_html/largo_spa/scoreprolibraries/chinese_remote_system"             # path to the pickleball libraries on the server
-    listGenerator               = file_list_module.PopulateFileList( pickleballLibraryServerPath )
+    path_to_pickleball_cpp  = "/mnt/c/Users/EG/Desktop/2022/may/2nd_week/pickle_cpp"
+    pickleball_library_server_path = "/public_html/largo_spa/scoreprolibraries/chinese_remote_system"             # path to the pickleball libraries on the server
+    listGenerator               = file_list_module.PopulateFileList( pickleball_library_server_path )
     files                       = listGenerator.execute()
     files.sort()
     while True:
@@ -36,8 +36,8 @@ def main():
         except IndexError: 
             print("Invalid input")
     
-    pickleballFilePuller       = filePuller.PullZipFile(   chosen_zip_file, pickleballLibraryServerPath ) # create a file puller object
-    mover                      = folderMover.FolderMover( chosen_zip_file, workingPickleballDirectory  ) # create a folder mover object
+    pickleballFilePuller       = filePuller.PullZipFile(   chosen_zip_file, pickleball_library_server_path ) # create a file puller object
+    mover                      = folderMover.FolderMover( chosen_zip_file, path_to_pickleball_cpp  ) # create a folder mover object
     
     pickleballFilePuller.execute()  # pull the chosen file from the server
     mover.execute()                 # move the extracted files to the working directories
