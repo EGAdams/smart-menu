@@ -1,0 +1,14 @@
+[
+    {
+        "title": "MCBA",
+        "action": "echo 'opening mcba menu...'",
+        "working_directory": "",
+        "open_in_subprocess": false
+    },
+    {
+        "title": "Add Log",
+        "action": "python3 log_message.py",
+        "working_directory": "/home/adamsl/smart-menu/python_menus/",
+        "open_in_subprocess": false
+    }
+]

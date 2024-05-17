@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Show vscode installations",
+        "action": "whereis code",
+        "working_directory": "",
+        "open_in_subprocess": false
+    },
+    {
+        "title": "MCBA",
+        "action":"python3 mcba_menu_system.py",
+        "working_directory": "/home/adamsl/smart-menu/python_menus/smart_menu/menus/mcba_menu",
+        "open_in_subprocess": false
+    },
+    {
+        "title": "Crawler",
+        "action": "echo opening sunbiz status...",
+        "working_directory": "",
+        "open_in_subprocess": false
+    },
+    {
+        "title": "Airport",
+        "action": "echo opening sunbiz status...",
+        "working_directory": "",
+        "open_in_subprocess": false
+    },
+    {
+        "title": "Largo",
+        "action": "echo opening sunbiz status...",
+        "working_directory": "",
+        "open_in_subprocess": false
+    }
+]

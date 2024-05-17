@@ -20,14 +20,12 @@ class Menu:
                 choice = int(choice)
                 if 1 <= choice <= len(self.items):   #
                     self.items[choice - 1].execute() # Shabaaam! This is the line that executes the command
-                elif choice == len(self.items) + 1:  #
+                elif choice == len(self.items) + 1:
                     break
                 elif choice == len(self.items) + 2:
                     menu_manager.add_menu_item()
             else:
                 print("Invalid selection. Please try again.")
-    
-    
 
     def add_new_item(self):
         title = input("Enter title for new item: ")

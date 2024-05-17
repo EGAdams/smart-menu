@@ -50,13 +50,13 @@ def main():
     choice = input("\n    Please select an option: \n    > ")
     print( "                                                 " )
 
-    home_directory = "/home/adamsl/smart-menu"
+    home_directory = "/home/adamsl/smart-menu/"
 
     if choice == "kk":
         print( "opening smart menu... " )
         # open a child process to execute script
-        os.chdir( home_directory + "/python_menus/smart_menu" )
-        os.system( "python3 smart_menu_system.py" )
+        os.chdir( home_directory + "python_menus/smart_menu/menus/root_menu" )
+        os.system( "python3 root_menu_system.py" )
         main()
     
     if choice == "99sw":
